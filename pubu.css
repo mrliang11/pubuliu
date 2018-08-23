@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+}
+.wrapper{
+    width: 80%;
+    min-width: 950px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    text-align: center;
+    /* 父级设居中 ul设行级块元素 */
+}
+.wrapper .box{
+    display: inline-block;
+}
+.wrapper .box li{
+    float: left;
+}
+.wrapper .box li .item img{
+    width: 100%;
+}
+.wrapper .box li .item .box{
+    width: 100%;
+    overflow: hidden;
+    /* 关键点 把图片多设2px 超出的部分隐藏 谷歌的问题就可以解决 */
+}
+.wrapper .box li .item{
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin:0 5px 10px;
+    
+    /* margin塌陷 上面如果是margin-bottom:5px 下面margin-top:5px 最后还是5px*/
+}
+.wrapper .box li  .item p{
+    font-size: 16px;
+    overflow: hidden;
+}
